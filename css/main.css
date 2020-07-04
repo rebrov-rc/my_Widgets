@@ -173,6 +173,36 @@
      object-fit: contain;
 }
 
+.rate-widget {
+  background-color: #ffffffdc;
+  margin-left: 2em;
+}
+
+.rate-widget .title {
+  color: #979797;
+  letter-spacing: .1em;
+  padding: 3px;
+}
+
+.stars-wrap {
+  height: 3em;
+  width: 12em;
+  border: solid 1ps;
+  -webkit-box-shadow: 1px 1px 5px #00000055;
+          box-shadow: 1px 1px 5px #00000055;
+}
+
+.st-wrap {
+  color: #cccccc;
+  font-size: 1.3em;
+  height: 100%;
+  width: 15%;
+}
+
+.green {
+  color: green;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
