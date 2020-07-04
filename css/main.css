@@ -1,0 +1,251 @@
+.abs {
+  position: absolute;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.widget-OClock {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background-color: #1a2122;
+  margin-right: 30px;
+  -webkit-box-shadow: 0 -12px 12px rgba(255, 255, 255, 0.1), inset 0 -12px 12px rgba(255, 255, 255, 0.1), 0 12px 12px rgba(0, 0, 0, 0.9), inset 0 12px 12px rgba(0, 0, 0, 0.9);
+          box-shadow: 0 -12px 12px rgba(255, 255, 255, 0.1), inset 0 -12px 12px rgba(255, 255, 255, 0.1), 0 12px 12px rgba(0, 0, 0, 0.9), inset 0 12px 12px rgba(0, 0, 0, 0.9);
+  border: 2px solid #1a2122;
+}
+
+.point {
+  width: 110px;
+  height: 110px;
+}
+
+.pPlace {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.seconds {
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+}
+
+.secLine {
+  margin: auto;
+  height: 70%;
+  width: 0;
+  border: 1px solid #e28344;
+}
+
+.minutes {
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+}
+
+.minLine {
+  margin: auto;
+  width: 0;
+  height: 57%;
+  border: 2px solid #89b1b3;
+  border-radius: 1px;
+}
+
+.hours {
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+
+.hourLine {
+  width: 0;
+  height: 56%;
+  border: 3px solid #7a8283;
+  border-radius: 2px;
+  margin: auto;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@-webkit-keyframes newTemp {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes newTemp {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.animation {
+  -webkit-animation: newTemp 4s;
+          animation: newTemp 4s;
+}
+
+.weather-widget {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin: 0 1em;
+  width: 200px;
+  height: 100px;
+  background-color: #000000;
+  -webkit-box-shadow: 0 13px 15px #00000060, 0 -13px 15px rgba(253, 253, 253, 0.05);
+          box-shadow: 0 13px 15px #00000060, 0 -13px 15px rgba(253, 253, 253, 0.05);
+  border-radius: 18px;
+  color: #000000;
+}
+
+.weather-widget .fon {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: .6;
+}
+
+.weather-inner {
+  position: absolute;
+  bottom: 0;
+  height: 75%;
+  margin: auto;
+  padding: 0 1em;
+}
+
+.fa-sun {
+  color: #eee786;
+  font-size: 50px;
+}
+
+.temp {
+  height: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 1em;
+  font-size: 32px;
+  font-style: bold;
+  color: #ffffff;
+}
+
+.weath-title {
+  background-color: #ffffff;
+  padding: 0 2em;
+}
+
+.icon {
+  position: relative;
+  width: 70px;
+}
+
+.icon img {
+  position: relative;
+  width: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-bet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.m-center {
+  display: block;
+  margin: auto;
+}
+
+body, * {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgba(54, 60, 63, 0.74);
+}
+
+.page {
+  max-width: 1240px;
+  width: 100%;
+  margin: auto;
+  height: 100vh;
+  background-color: #363c3f;
+  padding: 1em;
+  color: #ffffff;
+}
+
+.widgets-wrap {
+  border: solid #ffffff27 1px;
+  padding: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main.css.map */
