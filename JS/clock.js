@@ -20,8 +20,7 @@ class TimeClass{
         this.check()
     };
     check(){
-        setInterval(() => { this.timeData(); console.log(456);
-         }, 3600)
+        setInterval(() => { this.timeData(); }, 360000)
     };
     stconds() {
         let dependCount = this.minCounter + this.secCounter / 10,
