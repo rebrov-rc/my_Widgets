@@ -1,48 +1,41 @@
 "use strict"
-function onLoad(){
-    let lStorage = localStorage.getItem('rate'),
-    block = document.querySelector('.stars-wrap');
-    block.addEventListener('mouseout' , post)
-    // block.addEventListener('mouseover' ,  () => {  })
-    for ( let i = 0; i < 5; i++ ){
-        block.innerHTML +=`<div class='st-wrap flex'> <i class="fa fa-star stars" aria-hidden="true"></i></div>`
+class Rating{
+    constructor(key, wrap, items){
+        this.lStorage = localStorage.getItem(key)
+        this.block = document.querySelector(wrap)
     }
-
-    let stars = document.querySelectorAll('.stars'),
-    stWrap = document.querySelectorAll('.st-wrap');
-    if( lStorage === null ){lStorage = 0}
-    ////////////
-    storage()
-    ppp()
-    //////////////////////////////////////////////////////
-    function storage(){
-        for( let iII = 0;  iII < lStorage ; iII++ ){
+    start(){
+        for ( let i = 0; i < 5; i++ ){
+            this.block.innerHTML +=`<div class='st-wrap flex'> <i class="fa fa-star stars" aria-hidden="true"></i></div>`
+        }
+        let stars = document.querySelectorAll('.stars')
+        this.stWrap = document.querySelectorAll('.st-wrap') 
+        this.block.addEventListener('mouseout' , () => { this.post(stars)})
+        if( this.lStorage === null ){this.lStorage = 0}
+        this.storage(stars, this.lStorage)
+        this.events(stars)
+    };
+    storage(stars, j = this.lStorage){
+        for( let iII = 0;  iII < j ; iII++ ){
             stars[iII].classList.add('green')
         }
-    }
-    function post() { 
-        stars.forEach( item => {
+    };
+    post(stars) { 
+        stars.forEach( item => {            
             item.classList.remove('green')
         })
-        storage()
-    }
-    function ppp(){
-        stWrap.forEach((item, i) => {
+        this.storage(stars)
+    };
+    events(stars){
+        this.stWrap.forEach((item, i) => {
             item.addEventListener('click' ,  () => { 
-                lStorage = i + 1
-                localStorage.setItem('rate', lStorage)
-                post()
+                this.lStorage = i + 1
+                localStorage.setItem('rate', this.lStorage)
+                this.post(stars)
             })
-            item.addEventListener('mouseover' , function choise() {
-        
-                for( let iII = 0;  iII < i + 1 ; iII++ ){
-                    stars[iII].classList.add('green')
-                }
-            })
-            // item.addEventListener('mouseout' ,  () => { 
-            //  for( let iII = 0;  iII < i + 1 ; iII++ ){stars[iII].classList.remove('green')}})
-        })
-        
-    }
+            item.addEventListener('mouseover' , ()=>{this.storage(stars, i+1)})
+        }) 
+    };
 }
-onLoad()
+const rate = new Rating( 'rate', '.stars-wrap' );
+rate.start()
