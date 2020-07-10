@@ -236,7 +236,7 @@
 .return-elements {
   display: none;
   width: 100%;
-  height: 4%;
+  height: 3%;
   background-color: #fff;
   position: absolute;
   bottom: 10px;
@@ -314,6 +314,13 @@ body, * {
 
 body {
   background-color: rgba(54, 60, 63, 0.74);
+}
+
+.main-title {
+  padding: .3em;
+  font-size: 3em;
+  letter-spacing: .2em;
+  color: #fdfdfd71;
 }
 
 .page {

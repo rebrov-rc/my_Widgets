@@ -49,8 +49,7 @@ const productsII = {
             }
         }
     ]
-}
-
+};
 class SliderII {
     constructor(prod, wrap, elements){
       this.prod = prod
@@ -91,5 +90,5 @@ class SliderII {
     }
 }
 
-const slider = new SliderII(productsII.array, 'slider--II', 'returnElements')
+const slider = new SliderII( productsII.array, 'slider--II', 'returnElements' )
 slider.start()
