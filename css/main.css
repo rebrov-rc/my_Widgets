@@ -202,8 +202,38 @@
 
 .slider--I {
   border: solid 2px #7777779a;
+  position: relative;
   height: 20em;
   width: 12em;
+  overflow: hidden;
+}
+
+.slider--I-wrap {
+  position: relative;
+  top: 1em;
+  width: 100%;
+  margin: auto;
+  height: 70%;
+  left: 0%;
+  -webkit-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
+}
+
+.slider--I-wrap img {
+  position: relative;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.slider-I-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .slider--II {
@@ -239,7 +269,7 @@
   height: 3%;
   background-color: #fff;
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   border-radius: 1px;
 }
 
@@ -320,7 +350,7 @@ body {
   padding: .3em;
   font-size: 3em;
   letter-spacing: .2em;
-  color: #fdfdfd71;
+  color: #00000083;
 }
 
 .page {
