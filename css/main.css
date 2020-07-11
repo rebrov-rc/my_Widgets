@@ -1,7 +1,3 @@
-.abs {
-  position: absolute;
-}
-
 .circle {
   border-radius: 50%;
 }
@@ -236,6 +232,40 @@
   height: 100%;
 }
 
+.sliderI-dots {
+  cursor: pointer;
+  background-color: #00000018;
+  width: 10%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+}
+
+.dot-right {
+  right: 0;
+}
+
+.dot-left {
+  left: 0;
+}
+
+.lines {
+  width: 9px;
+  height: 9px;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+}
+
+.line-II {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.line-I {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .slider--II {
   cursor: pointer;
   position: relative;
@@ -332,6 +362,10 @@
 
 .i {
   margin: 1em;
+}
+
+.abs {
+  position: absolute;
 }
 
 body, * {

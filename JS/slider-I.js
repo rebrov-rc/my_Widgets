@@ -2,7 +2,7 @@ const products = {
     array: [
         {
             id: 01,
-            img: ['https://lh3.googleusercontent.com/proxy/q2pkT16gntbg5lHcsw5CMphrptf0bQ6dx2ETfWqr-drQXg-zGkNIJUq8dmDFH2cgBTj39TRZgSSBO9_478B92-rPoxlNsXbGiv6qJXdDl1wEQzsPG92K'],
+            img: ['../img/unnamed.jpg'],
             name: '',
             description: {
                 title: ''
