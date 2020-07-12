@@ -74,12 +74,11 @@ const products = {
         }
     ]
 };
-
-
-
 class SliderI{
-    constructor(wrap, el){
+    constructor(wrap, el, right, left){
         this.wrap = document.querySelector('.' + wrap)
+        this.btnRight = document.querySelector('.' + right)
+        this.btnLeft = document.querySelector('.' + left)
         this.el = el
         this.counter = 0
         this.j = 0
@@ -94,14 +93,13 @@ class SliderI{
         }
     }
     auto(){
-        this.interval = setInterval(() => {
             if ( this.counter >=  (1) * 100 ) {
                 if ( this.j === this.el.length){this.j = 0}
                 this.transition()
             }
             this.counter += 100
             this.wrap.style.left = '-' + this.counter + '%'
-        },3000)
+        
     }
     transition(){
         this.l = this.counter + (this.el.length - 1 ) * 100 - this.j * 100
@@ -109,12 +107,17 @@ class SliderI{
         this.j += 1
 
     }
+    events(){
+        this.btnRight.addEventListener('click', ()=> {this.auto()})
+        this.btnLeft.addEventListener('click', ()=> {})
+    }
     start(){
         this.sliderInfinite() 
-        this.auto()
+        this.events()
+        this.interval = setInterval(() => {this.auto()},3000)
     }
 }
-const widSliderI = new SliderI('slider--I-wrap', products.array)
+const widSliderI = new SliderI('slider--I-wrap', products.array, 'dot-right', 'dot-left')
 widSliderI.start()
 
 // fetch( "../JSON/data_I.json") 
