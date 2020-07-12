@@ -1,0 +1,78 @@
+{
+    "products": {
+        "array": [
+            {
+                "id": "01",
+                "img": ["../img/unnamed.jpg"],
+                "name": "",
+                "description": {
+                    "title": ""
+                },
+                "prise": {
+                    "new": "",
+                    "old": ""
+                }
+            },
+            {
+                "id": "02",
+                "img": ["https://img.usamodelkina.ru/uploads/posts/2014-04/1396584250_idei-iz-dereva.jpg"],
+                "name": "",
+                "description": {
+                    "title": ""
+                },
+                "prise": {
+                    "new": "",
+                    "old": ""
+                }
+            },
+            {
+                "id": "03",
+                "img": ["https://luxury-house.org/wp-content/uploads/elementy-dekora-interera-3.jpg"],
+                "name": "",
+                "description": {
+                    "title": ""
+                },
+                "prise": {
+                    "new": "",
+                    "old": ""
+                }
+            },
+            {
+                "id": "04",
+                "img": ["https://www.charlescameron.ru/images/2019/1T9A4428-v.jpg"],
+                "name": "",
+                "description": {
+                    "title": ""
+                },
+                "prise": {
+                    "new": "",
+                    "old": ""
+                }
+            },
+            {
+                "id": "05",
+                "img": ["https://web-3.ru/data/articles/6461/1.jpg"],
+                "name": "",
+                "description": {
+                    "title": ""
+                },
+                "prise": {
+                    "new": "",
+                    "old": ""
+                }
+            },
+            {
+                "id": "06",
+                "img": ["../img/ii.jpg"],
+                "name": "",
+                "description": {
+                    "title": ""
+                },
+                "prise": {
+                    "new": "",
+                    "old": ""
+                }
+            }
+        ]
+    }
+}

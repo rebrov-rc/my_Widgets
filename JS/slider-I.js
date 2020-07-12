@@ -62,7 +62,7 @@ const products = {
         },
         {
             id: 06,
-            img: ['https://lh3.googleusercontent.com/proxy/YwyDf165iSEkJksz_rXxDyisPEkYc70xwh8UK6K13pcSqrB9dj7DP-z1RPKlCXKUX4Dm5x2AEJcQdYKHMMvCjWaxqMmfE-wXrT-MAU0'],
+            img: ['../img/ii.jpg'],
             name: '',
             description: {
                 title: ''
@@ -74,6 +74,9 @@ const products = {
         }
     ]
 };
+
+
+
 class SliderI{
     constructor(wrap, el){
         this.wrap = document.querySelector('.' + wrap)
@@ -113,3 +116,11 @@ class SliderI{
 }
 const widSliderI = new SliderI('slider--I-wrap', products.array)
 widSliderI.start()
+
+// fetch( "../JSON/data_I.json") 
+// .then(response => {return response.json()})
+// .then(products => { 
+//     console.log(products.products);
+//     const widSliderI = new SliderI('slider--I-wrap', products.products.array)
+//     widSliderI.start()
+// })

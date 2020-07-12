@@ -14,7 +14,7 @@ const productsII = {
         },
         {
             id: 02,
-            img: ['https://lh3.googleusercontent.com/proxy/l549Y9n8vYQFwGqKPl4DfyMZiW_el7UK1pGeO2ntC60GDnT7yw5_fqT_gxCbzxiZ9CE3glLs3gn9VOf5s9rQqY9_ovV74EtWmSCQhrTiJwjAbXi7Rb6HeN4-S82JHlTIC8JpsxCLkN477JHTjdFw3N8i7fbAq_42dSg3wMU'],
+            img: ['../img/ij.jpg'],
             name: '',
             description: {
                 title: ''
@@ -26,7 +26,7 @@ const productsII = {
         },
         {
             id: 03,
-            img: ['https://lh3.googleusercontent.com/proxy/8wH7zKzAUubdmXCPehKXdoXxKIpwyV6EYEpUIsqimN9Bpkz036NbLUj0TN2IeJ9HMVp9p7I90GgID82F4wB2GoXXt_ywUPy90rDQTKbitVCZ9RLXrDMCsLfZos1f_4gtij69iYU'],
+            img: ['../img/is.jpg'],
             name: '',
             description: {
                 title: ''
