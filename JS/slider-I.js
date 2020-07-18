@@ -75,14 +75,14 @@ const products = {
     ]
 };
 class SliderI{
+    counter = 0
+    j = 0
+    l = 0
     constructor(wrap, el, right, left){
         this.wrap = document.querySelector('.' + wrap)
         this.btnRight = document.querySelector('.' + right)
         this.btnLeft = document.querySelector('.' + left)
         this.el = el
-        this.counter = 0
-        this.j = 0
-        this.l = 0
     }
     sliderInfinite(){
         for(let i = 0; i < this.el.length; i++){
@@ -92,29 +92,39 @@ class SliderI{
             this.img = document.querySelectorAll('.slI-img')
         }
     }
-    auto(){
-            if ( this.counter >=  (1) * 100 ) {
-                if ( this.j === this.el.length){this.j = 0}
-                this.transition()
+    auto(a = '+', b){
+            let r = +this.img[this.j].style.left.replace('%', '') + (this.j * 100)
+            // console.log(+this.counter - r);
+            // if ( this.counter >=  100 ) {
+            if ( this.counter - r  ===  100 || b === 'left' ) {
+                // this.img[this.j].style.left =  this.l + '%'
+                this.transition(a)
             }
-            this.counter += 100
+            a === '+'? this.counter += 100 :this.counter -= 100 
             this.wrap.style.left = '-' + this.counter + '%'
         
     }
-    transition(){
+    transition(side = '+'){
         this.l = this.counter + (this.el.length - 1 ) * 100 - this.j * 100
-        this.img[this.j].style.left =  this.l + '%'
-        this.j += 1
+        if(side === '-') {
+            this.j = (this.el.length - 1)  - this.j // !!!
+            this.img[this.j].style.left =  -this.l + '%'
+
+        }else {this.img[this.j].style.left =  this.l + '%'}
+        
+        side === '+'?  this.j +=  1 : this.j -=  1
+        console.log(this.j);
+        if ( this.j === this.el.length ){this.j = 0;}
 
     }
     events(){
-        this.btnRight.addEventListener('click', ()=> {this.auto()})
-        this.btnLeft.addEventListener('click', ()=> {})
+        this.btnRight.addEventListener('click', ()=> {this.auto('+')})
+        this.btnLeft.addEventListener('click', ()=> {this.auto('-', 'left')})
     }
     start(){
         this.sliderInfinite() 
         this.events()
-        this.interval = setInterval(() => {this.auto()},3000)
+        this.interval = setInterval(() => {this.auto('+')},3000)
     }
 }
 const widSliderI = new SliderI('slider--I-wrap', products.array, 'dot-right', 'dot-left')
