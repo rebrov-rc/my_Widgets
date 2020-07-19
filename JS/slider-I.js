@@ -113,7 +113,7 @@ class SliderI{
         }else {this.img[this.j].style.left =  this.l + '%'}
         
         side === '+'?  this.j +=  1 : this.j -=  1
-        console.log(this.j);
+        // console.log(this.j);
         if ( this.j === this.el.length ){this.j = 0;}
 
     }

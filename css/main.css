@@ -196,11 +196,29 @@
   color: green;
 }
 
+.sliderI-info {
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+}
+
+.sliderI-info div {
+  color: #d69f9f;
+  font-size: 1.1em;
+}
+
+.emo {
+  font-size: 2em;
+  color: #e9da86be;
+  margin-left: 10px;
+}
+
 .slider--I {
   border: solid 2px #7777779a;
   position: relative;
   height: 20em;
   width: 12em;
+  overflow: hidden;
   z-index: 100;
 }
 
@@ -314,6 +332,15 @@
   background-color: #93bfc7;
 }
 
+.pass-widget {
+  position: relative;
+  border: 0;
+}
+
+.icon-pass {
+  cursor: pointer;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -368,6 +395,10 @@
   position: absolute;
 }
 
+.dark {
+  color: #8d8d8d;
+}
+
 body, * {
   padding: 0;
   margin: 0;
@@ -384,7 +415,7 @@ body {
   padding: .3em;
   font-size: 3em;
   letter-spacing: .2em;
-  color: #00000083;
+  color: #061111a6;
 }
 
 .page {
@@ -405,5 +436,10 @@ body {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.smile {
+  color: #7eaa969c;
+  font-size: 1.2em;
 }
 /*# sourceMappingURL=main.css.map */
