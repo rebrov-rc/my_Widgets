@@ -337,8 +337,58 @@
   border: 0;
 }
 
+.pass-inp-wrap {
+  position: relative;
+}
+
+.pass-inp-wrap input {
+  letter-spacing: .34em;
+  padding: 0 .3em;
+  border-radius: 3px;
+  border: 0;
+}
+
+.pass-info {
+  font-size: .8em;
+  letter-spacing: .13em;
+}
+
 .icon-pass {
   cursor: pointer;
+  position: absolute;
+  right: .5em;
+  top: 45%;
+}
+
+.inp-pass {
+  font-size: 1.2em;
+}
+
+.eyes {
+  display: none;
+}
+
+.emotions-wrap {
+  position: relative;
+  width: 40px;
+}
+
+.pass-emos {
+  font-size: 2em;
+  display: none;
+  top: 28%;
+}
+
+.pass-emos-I {
+  color: #df8080;
+}
+
+.pass-emos-II {
+  color: #dfc680;
+}
+
+.pass-emos-III {
+  color: #80dfab;
 }
 
 .flex {
