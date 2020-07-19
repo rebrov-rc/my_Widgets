@@ -14,7 +14,7 @@ class Pass extends User{
         this.hidden = true
         this.len = []
         this.prop = []
-        this.complexity = ['.',',',';',':','/','*','=','&','%','?','$']
+        this.complexity = ['.',',',';',':','/','|','*','=','&','%','?','$']
     }
     init(){
         this.eye.addEventListener('click', () => {this.events()})

@@ -357,15 +357,16 @@
   cursor: pointer;
   position: absolute;
   right: .5em;
-  top: 45%;
+  top: 40%;
 }
 
 .inp-pass {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .eyes {
   display: none;
+  font-size: 1.4em;
 }
 
 .emotions-wrap {
